@@ -123,6 +123,15 @@ body {
   margin-top: 1.2rem;
 }
 
+.accent-heading,
+.accent-text {
+  color: #b35a3a;
+}
+
+.subtitle-top {
+  margin-top: 0;
+}
+
 .dim {
   color: var(--cream-dim);
 }
@@ -197,13 +206,14 @@ body {
 }
 
 /* ---------- Cover ---------- */
-.cover > *:not(.asterisk) {
+.cover > *:not(.asterisk):not(.claude-code-icon) {
   max-width: 62%;
   position: relative;
   z-index: 2;
 }
 
-.cover .asterisk {
+.cover .asterisk,
+.cover .claude-code-icon {
   position: absolute;
   right: clamp(2rem, 7vw, 8rem);
   top: 50%;
@@ -212,6 +222,12 @@ body {
   height: clamp(180px, 24vw, 360px);
   color: var(--accent);
   z-index: 1;
+}
+
+.cover .claude-code-icon {
+  background: var(--accent);
+  mask: var(--icon-url) center / contain no-repeat;
+  -webkit-mask: var(--icon-url) center / contain no-repeat;
 }
 
 .cover .accent-rule {
@@ -265,6 +281,10 @@ body {
   overflow: hidden;
   border: 1px solid var(--line);
   max-width: 950px;
+}
+
+.terminal-spaced {
+  margin-top: 2rem;
 }
 .terminal-bar {
   display: flex;
@@ -643,6 +663,33 @@ body {
   font-size: clamp(1rem, 1.5vw, 1.4rem);
 }
 
+.meta-demo {
+  margin-top: 2rem;
+  max-width: 90ch;
+}
+
+.meta-demo-summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.meta-demo-list {
+  margin-top: 1rem;
+  line-height: 1.6;
+  padding-left: 1.2rem;
+  color: var(--cream-dim);
+  font-size: 0.95rem;
+}
+
+.meta-demo-item {
+  margin-bottom: 0.6rem;
+}
+
+.meta-demo-rule {
+  color: var(--accent-soft);
+}
+
 /* analogy box (slide 03 abertura) */
 .analogy {
   margin-top: clamp(2rem, 4vw, 3rem);
@@ -680,5 +727,6 @@ body {
   .split-2 {
     grid-template-columns: 1fr;
   }
-  .cover .asterisk { display: none; }
+  .cover .asterisk,
+  .cover .claude-code-icon { display: none; }
 }
