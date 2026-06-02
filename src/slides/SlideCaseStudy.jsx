@@ -2,7 +2,7 @@ import { CATEGORIES } from "../data/presentation";
 
 export function SlideCaseStudy({ state }) {
   return (
-    <section className={`slide light ${state}`}>
+    <section className={`slide dark ${state}`}>
       <p className="kicker">06 · Estudo de caso · 70 regras, 8 categorias</p>
       <h1 className="title">As 8 categorias por prioridade</h1>
       <p className="subtitle">
