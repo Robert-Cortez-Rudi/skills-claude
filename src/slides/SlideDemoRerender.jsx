@@ -6,7 +6,7 @@ import { DemoPanels } from "../components/demo/DemoPanels";
 
 export function SlideDemoRerender({ state }) {
   return (
-    <section className={`slide light ${state}`}>
+    <section className={`slide dark ${state}`}>
       <p className="kicker">09 · Demo 3 · categoria rerender-</p>
       <h1 className="title">Re-render explosivo por prop não-primitiva</h1>
       <p className="subtitle">
