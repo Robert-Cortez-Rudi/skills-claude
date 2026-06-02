@@ -8,6 +8,7 @@ import { SlideDemoWaterfall } from "./SlideDemoWaterfall";
 import { SlideDownload } from "./SlideDownload";
 import { SlideProblem } from "./SlideProblem";
 import { SlideSkills } from "./SlideSkills";
+import { SlideThanks } from "./SlideThanks";
 import { SlideUse } from "./SlideUse";
 
 export const SLIDES = [
@@ -22,4 +23,5 @@ export const SLIDES = [
   SlideDemoBundle,
   SlideDemoRerender,
   SlideClosing,
+  SlideThanks,
 ];
