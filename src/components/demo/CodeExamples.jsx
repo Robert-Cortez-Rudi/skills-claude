@@ -1,9 +1,9 @@
 export function CodeWaterfallBefore() {
   return (
     <pre className="demo-code">
-      <span className="tok-kw">await</span> getUser(){"\n"}
-      <span className="tok-kw">await</span> getOrders(){"\n"}
-      <span className="tok-kw">await</span> getNotifications()
+      <span className="tok-kw">await</span> <span className="tok-fn">getUser</span>(){"\n"}
+      <span className="tok-kw">await</span> <span className="tok-fn">getOrders</span>(){"\n"}
+      <span className="tok-kw">await</span> <span className="tok-fn">getNotifications</span>()
     </pre>
   );
 }
@@ -11,12 +11,16 @@ export function CodeWaterfallBefore() {
 export function CodeWaterfallAfter() {
   return (
     <pre className="demo-code">
-      <span className="tok-kw">const</span> [user, orders, notif] ={"\n"}
+      <span className="tok-kw">const</span> [<span className="tok-var">user</span>,{" "}
+      <span className="tok-var">orders</span>, <span className="tok-var">notif</span>] ={"\n"}
       {"  "}
       <span className="tok-kw">await</span> <span className="tok-fn">Promise.all</span>([{"\n"}
-      {"    "}getUser(),{"\n"}
-      {"    "}getOrders(),{"\n"}
-      {"    "}getNotifications(){"\n"}
+      {"    "}
+      <span className="tok-fn">getUser</span>(),{"\n"}
+      {"    "}
+      <span className="tok-fn">getOrders</span>(),{"\n"}
+      {"    "}
+      <span className="tok-fn">getNotifications</span>(){"\n"}
       {"  "}])
     </pre>
   );
@@ -25,7 +29,9 @@ export function CodeWaterfallAfter() {
 export function CodeBundleBefore() {
   return (
     <pre className="demo-code">
-      <span className="tok-kw">import</span> {"{ debounce }"}{" "}
+      <span className="tok-kw">import</span> {"{ "}
+      <span className="tok-var">debounce</span>
+      {" }"}{" "}
       <span className="tok-kw">from</span> <span className="tok-str">'lodash'</span>
     </pre>
   );
@@ -34,7 +40,8 @@ export function CodeBundleBefore() {
 export function CodeBundleAfter() {
   return (
     <pre className="demo-code">
-      <span className="tok-kw">import</span> debounce <span className="tok-kw">from</span>{" "}
+      <span className="tok-kw">import</span> <span className="tok-var">debounce</span>{" "}
+      <span className="tok-kw">from</span>{" "}
       <span className="tok-str">'lodash/debounce'</span>
     </pre>
   );
@@ -43,8 +50,20 @@ export function CodeBundleAfter() {
 export function CodeRerenderBefore() {
   return (
     <pre className="demo-code">
-      {"<Filho\n"}
-      {"  config={{ x: 1, y: 2 }}\n"}
+      {"<"}
+      <span className="tok-tag">Filho</span>
+      {"\n"}
+      {"  "}
+      <span className="tok-attr">config</span>
+      {"={{ "}
+      <span className="tok-prop">x</span>
+      {": "}
+      <span className="tok-num">1</span>
+      {", "}
+      <span className="tok-prop">y</span>
+      {": "}
+      <span className="tok-num">2</span>
+      {" }}\n"}
       {"/>"}
     </pre>
   );
@@ -53,9 +72,21 @@ export function CodeRerenderBefore() {
 export function CodeRerenderAfter() {
   return (
     <pre className="demo-code">
-      <span className="tok-kw">const</span> CONFIG = {"{ x:1, y:2 }"}
+      <span className="tok-kw">const</span> <span className="tok-var">CONFIG</span> = {"{ "}
+      <span className="tok-prop">x</span>
+      {": "}
+      <span className="tok-num">1</span>
+      {", "}
+      <span className="tok-prop">y</span>
+      {": "}
+      <span className="tok-num">2</span>
+      {" }"}
       {"\n"}
-      {"<Filho config={CONFIG} />"}
+      {"<"}
+      <span className="tok-tag">Filho</span> <span className="tok-attr">config</span>=
+      {"{"}
+      <span className="tok-var">CONFIG</span>
+      {"} />"}
     </pre>
   );
 }
