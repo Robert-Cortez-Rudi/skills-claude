@@ -1,10 +1,8 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export function SlideDeck({ slides }) {
   const [index, setIndex] = useState(0);
   const total = slides.length;
-  const indexRef = useRef(0);
-  indexRef.current = index;
 
   const go = useCallback(
     (delta) => {
@@ -47,11 +45,6 @@ export function SlideDeck({ slides }) {
         return <Slide key={slideIndex} state={state} />;
       })}
 
-      <div className="hint">
-        <span className="key">←</span>
-        <span className="key">→</span>
-        <span>para navegar</span>
-      </div>
       <div className="footer-tag">Skill · vercel-react-best-practices</div>
       <div className="progress">{progressLabel}</div>
       <div className="progress-track" style={{ width: progressWidth }} />
