@@ -2,7 +2,7 @@ import { INSTALL_STEPS } from "../data/presentation";
 
 export function SlideDownload({ state }) {
   return (
-    <section className={`slide light ${state}`}>
+    <section className={`slide dark ${state}`}>
       <p className="kicker">04 · Como baixar a skill</p>
       <h1 className="title">Um comando. Trinta segundos.</h1>
       <div className="terminal terminal-spaced">
@@ -13,9 +13,7 @@ export function SlideDownload({ state }) {
           <span className="terminal-label">terminal</span>
         </div>
         <div className="terminal-body">
-          <span className="prompt-sign">$ </span>npx skills add
-          https://github.com/vercel-labs/agent-skills \{"\n"}
-          {"  "}--skill vercel-react-best-practices
+          <span className="prompt-sign">$ </span>npx skills add https://github.com/vercel-labs/agent-skills --skill vercel-react-best-practices
         </div>
       </div>
       <div className="steps-4">
