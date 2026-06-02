@@ -1,6 +1,6 @@
 export function SlideClaude({ state }) {
   return (
-    <section className={`slide light ${state}`}>
+    <section className={`slide dark ${state}`}>
       <p className="kicker">01 · O que é o Claude e o Claude Code</p>
       <h1 className="title">O modelo tem talento. A ferramenta entrega.</h1>
       <div className="split-2">
