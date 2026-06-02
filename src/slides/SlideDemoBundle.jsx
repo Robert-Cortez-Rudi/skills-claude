@@ -3,7 +3,7 @@ import { DemoPanels } from "../components/demo/DemoPanels";
 
 export function SlideDemoBundle({ state }) {
   return (
-    <section className={`slide light ${state}`}>
+    <section className={`slide dark ${state}`}>
       <p className="kicker">08 · Demo 2 · categoria bundle-</p>
       <h1 className="title">Bundle inflado por barrel import</h1>
       <p className="subtitle">Componente que usa um único método do lodash</p>
