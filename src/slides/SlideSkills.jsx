@@ -2,7 +2,7 @@ export function SlideSkills({ state }) {
   return (
     <section className={`slide dark ${state}`}>
       <p className="kicker">02 · O que são Skills</p>
-      <h1 className="title-italic title">Quem nunca pediu um componente React pro Claude...</h1>
+      <h1 className="title">Quem nunca pediu um componente React pro Claude...</h1>
       <p className="subtitle">
         ...e recebeu um código que funciona, mas segura a página por 3 segundos em
         produção?
