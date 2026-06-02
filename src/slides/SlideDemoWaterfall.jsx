@@ -6,7 +6,7 @@ import { DemoPanels } from "../components/demo/DemoPanels";
 
 export function SlideDemoWaterfall({ state }) {
   return (
-    <section className={`slide light ${state}`}>
+    <section className={`slide dark ${state}`}>
       <p className="kicker">07 · Demo 1 · categoria async-</p>
       <h1 className="title">Waterfall de fetches no dashboard</h1>
       <p className="subtitle">
