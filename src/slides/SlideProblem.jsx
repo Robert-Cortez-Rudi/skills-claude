@@ -1,6 +1,6 @@
 export function SlideProblem({ state }) {
   return (
-    <section className={`slide light ${state}`}>
+    <section className={`slide dark ${state}`}>
       <p className="kicker">03 · O problema que resolve</p>
       <h1 className="title">
         Um guia de performance para React e Next.js, mantido pela Vercel
