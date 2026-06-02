@@ -1,5 +1,7 @@
 import { ClaudeCodeIcon } from "../components/deck/ClaudeCodeIcon";
 
+const AUTHORS = ["Hyan Ferreira", "Robert Cortez"];
+
 export function SlideCover({ state }) {
   return (
     <section className={`slide dark cover ${state}`}>
@@ -10,7 +12,14 @@ export function SlideCover({ state }) {
         Como guiar o Claude a escrever React e Next.js performáticos por padrão
       </p>
       <div className="accent-rule" />
-      <p className="meta-line">70 regras · 8 categorias · mantida pela Vercel</p>
+      <div className="author-card" aria-label="Apresentadores">
+        <span className="author-card-label">Apresentadores</span>
+        <p className="author-line">
+          <span>{AUTHORS[0]}</span>
+          <span className="author-separator">&&</span>
+          <span>{AUTHORS[1]}</span>
+        </p>
+      </div>
     </section>
   );
 }
