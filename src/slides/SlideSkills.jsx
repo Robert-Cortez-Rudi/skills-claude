@@ -1,6 +1,6 @@
 export function SlideSkills({ state }) {
   return (
-    <section className={`slide light ${state}`}>
+    <section className={`slide dark ${state}`}>
       <p className="kicker">02 · O que são Skills</p>
       <h1 className="title-italic title">Quem nunca pediu um componente React pro Claude...</h1>
       <p className="subtitle">
