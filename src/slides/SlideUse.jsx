@@ -2,7 +2,7 @@ import { USE_MODES } from "../data/presentation";
 
 export function SlideUse({ state }) {
   return (
-    <section className={`slide light ${state}`}>
+    <section className={`slide dark ${state}`}>
       <p className="kicker">05 · Como usar a skill no Claude Code</p>
       <h1 className="title">Três modos - você raramente vai "chamar" a skill</h1>
       <p className="subtitle">
