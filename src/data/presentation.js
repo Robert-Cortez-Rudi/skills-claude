@@ -92,39 +92,31 @@ export const META_RULES = [
   {
     rule: "rerender-no-inline-components",
     where:
-      "Todos os componentes de slide são definidos no topo do módulo, nunca dentro de outro componente.",
-  },
-  {
-    rule: "rerender-memo-with-default-value",
-    where:
-      "CATEGORIES, USE_MODES, INSTALL_STEPS e demais arrays/objetos ficam no módulo, com referência estável.",
-  },
-  {
-    rule: "rendering-hoist-jsx",
-    where: "O SVG do asterisco é um componente estático fora do App.",
+      "SlideDeck, DemoPanels, CodeExamples e todos os slides são componentes próprios no escopo do módulo, não funções declaradas dentro de outro componente.",
   },
   {
     rule: "rerender-functional-setstate",
     where:
-      "go() usa setIndex(i => ...), mantendo o handler estável sem depender do índice atual.",
-  },
-  {
-    rule: "rerender-use-ref-transient-values / advanced-event-handler-refs",
-    where:
-      "indexRef guarda o índice corrente; o listener de teclado lê o ref e é registrado só uma vez.",
+      "SlideDeck usa setIndex(current => ...) em go(), então o callback não precisa capturar o índice atual.",
   },
   {
     rule: "rerender-dependencies",
     where:
-      "O useEffect do keydown usa dependências estáveis, evitando binds desnecessários.",
+      "O useEffect do listener depende apenas de valores estáveis/primitivos: go e total.",
   },
   {
-    rule: "client-event-listeners / client-passive-event-listeners",
-    where: "Um único listener global de keydown, com cleanup no unmount.",
+    rule: "client-event-listeners",
+    where:
+      "Existe um único listener global de keydown em SlideDeck, com cleanup no retorno do effect.",
   },
   {
     rule: "rendering-conditional-render",
     where:
-      "Slides usam classes condicionais por ternário em vez de && para evitar render de 0/false.",
+      "O estado visual de cada slide é calculado por ternário: active, prev ou string vazia.",
+  },
+  {
+    rule: "bundle-analyzable-paths",
+    where:
+      "O ícone do Claude Code é importado estaticamente em ClaudeCodeIcon.jsx, permitindo o Vite rastrear o asset no build.",
   },
 ];
